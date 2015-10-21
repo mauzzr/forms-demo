@@ -20,6 +20,25 @@ body {
 
 }
 
+
+
+/* Table formatting */
+#tableArea {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+table {
+    display: inline-table;
+    border: 1px black;
+}
+
+td {
+    border: 1px black;
+    padding: 0.5em;
+}
+
 /* Form formatting */
 #inputArea {
     text-align: center;
