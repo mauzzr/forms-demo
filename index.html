@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+           Peter Welby
+           UMass Lowell Computer Science Undergraduate - 91.461 GUI Programming I
+           pwelby@cs.uml.edu
+           File: index.html, created 18 Oct. 2015
+           This single-page application works with HTML form input to dynamically construct
+           a multiplication table, and was created for the purposes of Assignment 6 in 91.461.
+           See: js/mtable.js
+    -->
+    <title>91.461 Assignment 6</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/mtable.js"></script>
+</head>
+<body>
+    <div id="mainContent">
+        <div id="tableArea"></div>
+        <div id="inputArea">
+        <!-- In HTML5, the "action" attribute is no longer required.
+             See http://www.w3schools.com/tags/att_form_action.asp
+         -->
+        <form id="mainForm" method="get" action="" onsubmit="return validate();">
+            <fieldset>
+                <legend>Columns</legend>
+                Start:<br />
+                <input type="number" name="cStart" id="in1" class="startInput" maxlength="3" /><br />
+                End:<br />
+                <input type="number" name="cEnd" id="in2" maxlength="3" />
+            </fieldset>
+            <fieldset>
+                <legend>Rows</legend>
+                Start:<br />
+                <input type="number" name="rStart" id="in3" class="startInput" maxlength="3" /><br />
+                End:<br />
+                <input type="number" name="rEnd" id="in4" maxlength="3" />
+            </fieldset><br />
+            <button type="submit">Generate</button>
+            <button type="reset">Clear</button>
+        </form>
+        </div>
+        <div id="message"></div>
+    </div>
+</body>
+</html>
